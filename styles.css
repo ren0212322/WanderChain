@@ -1,0 +1,229 @@
+/* General Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #004d99;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Allows absolute positioning of child elements */
+}
+
+header h1 {
+  margin: 0;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+h2 {
+  color: #004d99;
+}
+
+button.button {
+  background-color: #004d99;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.button:hover {
+  background-color: #003366;
+}
+
+footer {
+  background-color: #004d99;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+/* Heritage Page Styles */
+.heritage-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.heritage-image {
+  width: 150px; /* Fixed thumbnail width */
+  height: 100px; /* Fixed thumbnail height */
+  object-fit: cover; /* Ensures the image covers the dimensions without stretching */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.heritage-image:hover {
+  transform: scale(1.05);
+}
+
+.heritage-list a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.heritage-list p {
+  margin-top: 5px;
+}
+
+/* Gallery Page Styles */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Hotel Booking Page Styles */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  background-color: #004d99;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #003366;
+}
+
+/* Wallet Buttons */
+.wallet-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.wallet-button {
+  background-color: rgb(255, 140, 0); /* Dark orange background */
+  color: black; /* Black text */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 2px 0; /* Minimal space between buttons */
+    text-decoration: none;
+}
+
+.wallet-button:hover {
+  background-color: rgb(255, 120, 0); /* Slightly darker orange */
+  transform: scale(1.05);
+}
+
+/* Ensure other buttons have blue background and white text */
+.button {
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Slightly darker blue */
+  transform: scale(1.05);
+}
