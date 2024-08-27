@@ -1,22 +1,25 @@
 import hre from "hardhat";
 import * as dotenv from "dotenv";
-import { SeedEduToken } from "../typechain-types";
-import { walletAddress, claimableAmt } from "../receiver"; 
+import { WanderToken } from "../typechain-types";
+import { walletAddress, claimableAmt } from "../receiver";
 import { BigNumber } from "ethers";
 dotenv.config();
 
-async function transfer(myCustomToken: SeedEduToken, recipientAddress: string, amount: BigNumber) {
-    // Transaction
-    const tranc = await myCustomToken.transfer(recipientAddress, amount);
-    await tranc.wait();
-    console.log(`Transacted ${amount} tokens to ${recipientAddress}`);
-
+async function transfer(
+  myCustomToken: WanderToken,
+  recipientAddress: string,
+  amount: BigNumber
+) {
+  // Transaction
+  const tranc = await myCustomToken.transfer(recipientAddress, amount);
+  await tranc.wait();
+  console.log(`Transacted ${amount} tokens to ${recipientAddress}`);
 }
 
 async function main() {
   // Connect to the deployed contract using its address
   const contractAddress = process.env.CONTRACT_ADDRESS || ""; // Replace with your contract's address
-  const MyCustomToken = await hre.ethers.getContractFactory("SeedEduToken");
+  const MyCustomToken = await hre.ethers.getContractFactory("WanderToken");
   const myCustomToken = MyCustomToken.attach(contractAddress);
 
   // Replace with the address to which you want to mint tokens and the amount
@@ -24,24 +27,23 @@ async function main() {
   const tAmount = hre.ethers.utils.parseUnits(claimableAmt.toString(), 18); // Mint 90 tokens
 
   // Mint new tokens
-//   const tx = await myCustomToken.mint(recipientAddress, mintAmount);
-//   await tx.wait();
+  //   const tx = await myCustomToken.mint(recipientAddress, mintAmount);
+  //   await tx.wait();
 
-//   console.log(`Minted ${mintAmount.toString()} tokens to ${recipientAddress}`);
+  //   console.log(`Minted ${mintAmount.toString()} tokens to ${recipientAddress}`);
 
   // Transaction
-//   const tranc = await myCustomToken.mint(recipientAddress, mintAmount);
-//   await tranc.wait();
-//   console.log(`Minted ${mintAmount.toString()} tokens to ${recipientAddress}`);
+  //   const tranc = await myCustomToken.mint(recipientAddress, mintAmount);
+  //   await tranc.wait();
+  //   console.log(`Minted ${mintAmount.toString()} tokens to ${recipientAddress}`);
 
-// transfer(myCustomToken, "0xfB8ae9808D84BF601f2Ef6178Da51a612bD046D0", 2);
-if(claimableAmt > 0) {
-  transfer(myCustomToken, walletAddress, tAmount);
-
-}else{
-  console.log("NOT ENOUGH TOKEN");
-}
-// console.log(walletAddress,claimableAmt)
+  // transfer(myCustomToken, "0xfB8ae9808D84BF601f2Ef6178Da51a612bD046D0", 2);
+  if (claimableAmt > 0) {
+    transfer(myCustomToken, walletAddress, tAmount);
+  } else {
+    console.log("NOT ENOUGH TOKEN");
+  }
+  // console.log(walletAddress,claimableAmt)
 }
 
 main().catch((error) => {

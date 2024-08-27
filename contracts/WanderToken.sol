@@ -4,9 +4,9 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract SeedEduToken is ERC20 {
+contract WanderToken is ERC20 {
     // Constructor that initializes the ERC20 token with a name and symbol
-    constructor() ERC20("SEEDToken", "SDU") {
+    constructor() ERC20("WanderToken", "WRTC") {
         // Mint initial supply of tokens to the contract deployer's address
         // _mint(msg.sender, 1000000 * 10 ** decimals());
     }
@@ -23,10 +23,10 @@ contract SeedEduToken is ERC20 {
     }
 
     // Function to donate tokens from one address to another
-    function donate(address from, address to, uint256 amount) public returns (bool) {
-        require(balanceOf(from) >= amount, "Insufficient amount in donor's wallet");
+    // function donate(address from, address to, uint256 amount) public returns (bool) {
+    //     require(balanceOf(from) >= amount, "Insufficient amount in donor's wallet");
 
-        _transfer(from, to, amount);
-        return true;
-    }
+    //     _transfer(from, to, amount);
+    //     return true;
+    // }
 }

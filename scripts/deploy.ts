@@ -2,11 +2,15 @@ const hre = require("hardhat");
 
 async function main() {
   // Compile and deploy the contract
-  const SeedEduToken = await hre.ethers.getContractFactory("SeedEduToken");
-  const myCustomToken = await SeedEduToken.deploy();
+  const WanderToken = await hre.ethers.getContractFactory("WanderToken");
+  const myCustomToken = await WanderToken.deploy();
   await myCustomToken.deployed();
 
-  console.log("MyCustomToken deployed to:===========","myCustomToken", myCustomToken.address);
+  console.log(
+    "MyCustomToken deployed to:===========",
+    "myCustomToken",
+    myCustomToken.address
+  );
 
   // Replace with the address to which you want to mint tokens and the amount
   const recipientAddress = "0xB702203B9FD0ee85aeDB9d314C075D480d716635";
