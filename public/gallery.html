@@ -1,42 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>[City Name]</h1>
-    <img src="logo.png" alt="[City Name] Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="heritage.html">Heritage</a></li>
-        <li><a href="hotel_booking.html">Hotel Booking</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>Gallery</h2>
-    <p>Explore the beauty of our city's heritage sites through the images below:</p>
-    <div class="gallery-grid">
-      <img src="parthenon_gallery.jpg" alt="The Parthenon" class="gallery-image">
-      <img src="temple_of_hephaestus_gallery.jpg" alt="The Temple of Hephaestus" class="gallery-image">
-      <img src="ancient_agora_gallery.jpg" alt="The Ancient Agora" class="gallery-image">
-      <img src="odeon_of_herodes_atticus_gallery.jpg" alt="The Odeon of Herodes Atticus" class="gallery-image">
-      <img src="temple_of_olympian_zeus_gallery.jpg" alt="The Temple of Olympian Zeus" class="gallery-image">
-      <img src="erechtheion_gallery.jpg" alt="The Erechtheion" class="gallery-image">
-      <img src="temple_of_athena_nike_gallery.jpg" alt="The Temple of Athena Nike" class="gallery-image">
-      <img src="stoa_of_attalos_gallery.jpg" alt="The Stoa of Attalos" class="gallery-image">
-      <img src="roman_agora_gallery.jpg" alt="The Roman Agora" class="gallery-image">
-      <img src="theater_of_dionysus_gallery.jpg" alt="The Theater of Dionysus" class="gallery-image">
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2024 [City Name] Tourism</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="wallet.js"></script>
+    <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>[City Name]</h1>
+      <img src="greece_logo.png" alt="[City Name] Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="hotel_booking.html">Hotel Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="wallet-buttons">
+        <button
+          id="walletButton"
+          class="wallet-button"
+          onclick="connectWallet()"
+        >
+          Connect Your Wallet
+        </button>
+        <a href="balance.html" class="wallet-button">Withdraw</a>
+      </div>
+    </header>
+    <main>
+      <h2>Gallery</h2>
+      <p>
+        Explore the beauty of our city's heritage sites through the images
+        below:
+      </p>
+      <div class="gallery-grid">
+        <img
+          src="parthenon_gallery.jpg"
+          alt="The Parthenon"
+          class="gallery-image"
+        />
+        <img
+          src="temple_of_hephaestus_gallery.jpg"
+          alt="The Temple of Hephaestus"
+          class="gallery-image"
+        />
+        <img
+          src="ancient_agora_gallery.jpg"
+          alt="The Ancient Agora"
+          class="gallery-image"
+        />
+        <img
+          src="odeon_of_herodes_atticus_gallery.jpg"
+          alt="The Odeon of Herodes Atticus"
+          class="gallery-image"
+        />
+        <img
+          src="temple_of_olympian_zeus_gallery.jpg"
+          alt="The Temple of Olympian Zeus"
+          class="gallery-image"
+        />
+        <img
+          src="erechtheion_gallery.jpg"
+          alt="The Erechtheion"
+          class="gallery-image"
+        />
+        <img
+          src="temple_of_athena_nike_gallery.jpg"
+          alt="The Temple of Athena Nike"
+          class="gallery-image"
+        />
+        <img
+          src="stoa_of_attalos_gallery.jpg"
+          alt="The Stoa of Attalos"
+          class="gallery-image"
+        />
+        <img
+          src="roman_agora_gallery.jpg"
+          alt="The Roman Agora"
+          class="gallery-image"
+        />
+        <img
+          src="theater_of_dionysus_gallery.jpg"
+          alt="The Theater of Dionysus"
+          class="gallery-image"
+        />
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 [City Name] Tourism</p>
+    </footer>
+  </body>
 </html>

@@ -1,33 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Temple of Athena Nike</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Temple of Athena Nike</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="wallet.js"></script>
+    <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>Explore Greece</h1>
-        <img src="greece_logo.png" alt="Explore Greece Logo" class="logo">
-        <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="heritage.html">Heritage</a></li>
-        <li><a href="hotel_booking.html">Hotel Booking</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>The Temple of Athena Nike</h2>
-    <img src="temple_of_athena_nike_gallery.jpg" alt="The Temple of Athena Nike" class="site-image">
-    <p><strong>Description:</strong> The Temple of Athena Nike is a small yet elegant temple located on the Acropolis of Athens, dedicated to Athena Nike, the goddess of victory.</p>
-    <p><strong>History:</strong> Constructed between 427 and 424 BC, the temple was built to commemorate the Greek victories over the Persians. It is an example of Ionic architecture and is notable for its sculptural decoration, including reliefs that depict historical battles and religious ceremonies.</p>
-    <p>The temple's compact size and decorative sculptures make it a significant example of classical Greek temple design and a symbol of Athenian success in warfare.</p>
-  </main>
-  <footer>
-    <p>&copy; 2024 Explore Greece Tourism</p>
-  </footer>
-</body>
+      <h1>Explore Greece</h1>
+      <img src="greece_logo.png" alt="Explore Greece Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="hotel_booking.html">Hotel Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="wallet-buttons">
+        <button
+          id="walletButton"
+          class="wallet-button"
+          onclick="connectWallet()"
+        >
+          Connect Your Wallet
+        </button>
+        <a href="balance.html" class="wallet-button">Withdraw</a>
+      </div>
+    </header>
+    <main>
+      <h2>The Temple of Athena Nike</h2>
+      <img
+        src="temple_of_athena_nike_gallery.jpg"
+        alt="The Temple of Athena Nike"
+        class="site-image"
+      />
+      <p>
+        <strong>Description:</strong> The Temple of Athena Nike is a small yet
+        elegant temple located on the Acropolis of Athens, dedicated to Athena
+        Nike, the goddess of victory.
+      </p>
+      <p>
+        <strong>History:</strong> Constructed between 427 and 424 BC, the temple
+        was built to commemorate the Greek victories over the Persians. It is an
+        example of Ionic architecture and is notable for its sculptural
+        decoration, including reliefs that depict historical battles and
+        religious ceremonies.
+      </p>
+      <p>
+        The temple's compact size and decorative sculptures make it a
+        significant example of classical Greek temple design and a symbol of
+        Athenian success in warfare.
+      </p>
+    </main>
+    <footer>
+      <p>&copy; 2024 Explore Greece Tourism</p>
+    </footer>
+  </body>
 </html>

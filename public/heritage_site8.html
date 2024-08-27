@@ -1,33 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Stoa of Attalos</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Stoa of Attalos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="wallet.js"></script>
+    <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>Explore Greece</h1>
-        <img src="greece_logo.png" alt="Explore Greece Logo" class="logo">
-        <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="heritage.html">Heritage</a></li>
-        <li><a href="hotel_booking.html">Hotel Booking</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>The Stoa of Attalos</h2>
-    <img src="stoa_of_attalos_gallery.jpg" alt="The Stoa of Attalos" class="site-image">
-    <p><strong>Description:</strong> The Stoa of Attalos was a covered walkway or portico located in the Ancient Agora of Athens. It was used for commercial and social activities and was one of the most significant structures in the Agora.</p>
-    <p><strong>History:</strong> Built in the 2nd century BC by King Attalos II of Pergamon, the Stoa was reconstructed in the 1950s to its original design. It consisted of two stories and was adorned with columns in the Doric and Ionic orders. The structure provided shelter for merchants and philosophers and served as a prominent architectural feature of the Agora.</p>
-    <p>The Stoa of Attalos now houses a museum with exhibits related to Athenian daily life and artifacts uncovered from the Agora.</p>
-  </main>
-  <footer>
-    <p>&copy; 2024 Explore Greece Tourism</p>
-  </footer>
-</body>
+      <h1>Explore Greece</h1>
+      <img src="greece_logo.png" alt="Explore Greece Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="hotel_booking.html">Hotel Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="wallet-buttons">
+        <button
+          id="walletButton"
+          class="wallet-button"
+          onclick="connectWallet()"
+        >
+          Connect Your Wallet
+        </button>
+        <a href="balance.html" class="wallet-button">Withdraw</a>
+      </div>
+    </header>
+    <main>
+      <h2>The Stoa of Attalos</h2>
+      <img
+        src="stoa_of_attalos_gallery.jpg"
+        alt="The Stoa of Attalos"
+        class="site-image"
+      />
+      <p>
+        <strong>Description:</strong> The Stoa of Attalos was a covered walkway
+        or portico located in the Ancient Agora of Athens. It was used for
+        commercial and social activities and was one of the most significant
+        structures in the Agora.
+      </p>
+      <p>
+        <strong>History:</strong> Built in the 2nd century BC by King Attalos II
+        of Pergamon, the Stoa was reconstructed in the 1950s to its original
+        design. It consisted of two stories and was adorned with columns in the
+        Doric and Ionic orders. The structure provided shelter for merchants and
+        philosophers and served as a prominent architectural feature of the
+        Agora.
+      </p>
+      <p>
+        The Stoa of Attalos now houses a museum with exhibits related to
+        Athenian daily life and artifacts uncovered from the Agora.
+      </p>
+    </main>
+    <footer>
+      <p>&copy; 2024 Explore Greece Tourism</p>
+    </footer>
+  </body>
 </html>

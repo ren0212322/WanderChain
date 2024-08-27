@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Temple of Olympian Zeus</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Temple of Olympian Zeus</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="wallet.js"></script>
+    <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>Explore Greece</h1>
-        <img src="greece_logo.png" alt="Explore Greece Logo" class="logo">
-        <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="heritage.html">Heritage</a></li>
-        <li><a href="hotel_booking.html">Hotel Booking</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>The Temple of Olympian Zeus</h2>
-    <img src="temple_of_olympian_zeus_gallery.jpg" alt="The Temple of Olympian Zeus" class="site-image">
-    <p><strong>Description:</strong> The Temple of Olympian Zeus, also known as the Olympieion, is a colossal ancient temple dedicated to Zeus, the king of the Greek gods.</p>
-    <p><strong>History:</strong> Construction of the temple began in the 6th century BC under the tyrant Peisistratus and was completed in the 2nd century AD by the Roman emperor Hadrian. The temple originally consisted of 104 Corinthian columns, of which 15 still stand today. It was the largest temple in Greece and was intended to rival the Parthenon in grandeur.</p>
-    <p>The site was also associated with various religious festivals and ceremonies in honor of Zeus. Despite its incomplete state, the remains of the temple continue to impress visitors with its sheer scale and architectural innovation.</p>
-  </main>
-  <footer>
-    <p>&copy; 2024 Explore Greece Tourism</p>
-  </footer>
-</body>
+      <h1>Explore Greece</h1>
+      <img src="greece_logo.png" alt="Explore Greece Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="hotel_booking.html">Hotel Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="wallet-buttons">
+        <button
+          id="walletButton"
+          class="wallet-button"
+          onclick="connectWallet()"
+        >
+          Connect Your Wallet
+        </button>
+        <a href="balance.html" class="wallet-button">Withdraw</a>
+      </div>
+    </header>
+    <main>
+      <h2>The Temple of Olympian Zeus</h2>
+      <img
+        src="temple_of_olympian_zeus_gallery.jpg"
+        alt="The Temple of Olympian Zeus"
+        class="site-image"
+      />
+      <p>
+        <strong>Description:</strong> The Temple of Olympian Zeus, also known as
+        the Olympieion, is a colossal ancient temple dedicated to Zeus, the king
+        of the Greek gods.
+      </p>
+      <p>
+        <strong>History:</strong> Construction of the temple began in the 6th
+        century BC under the tyrant Peisistratus and was completed in the 2nd
+        century AD by the Roman emperor Hadrian. The temple originally consisted
+        of 104 Corinthian columns, of which 15 still stand today. It was the
+        largest temple in Greece and was intended to rival the Parthenon in
+        grandeur.
+      </p>
+      <p>
+        The site was also associated with various religious festivals and
+        ceremonies in honor of Zeus. Despite its incomplete state, the remains
+        of the temple continue to impress visitors with its sheer scale and
+        architectural innovation.
+      </p>
+    </main>
+    <footer>
+      <p>&copy; 2024 Explore Greece Tourism</p>
+    </footer>
+  </body>
 </html>

@@ -1,72 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heritage Sites of Greece</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Explore Greece</h1>
-    <img src="greece_logo.png" alt="Explore Greece Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="heritage.html">Heritage</a></li>
-        <li><a href="hotel_booking.html">Hotel Booking</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>Heritage Sites</h2>
-    <p>Explore Greece's rich history through its iconic heritage sites:</p>
-    <div class="heritage-list">
-      <a href="heritage_site1.html">
-        <img src="parthenon_gallery.jpg" alt="The Parthenon" class="heritage-image">
-        <p>The Parthenon</p>
-      </a>
-      <a href="heritage_site2.html">
-        <img src="temple_of_hephaestus_gallery.jpg" alt="The Temple of Hephaestus" class="heritage-image">
-        <p>The Temple of Hephaestus</p>
-      </a>
-      <a href="heritage_site3.html">
-        <img src="ancient_agora_gallery.jpg" alt="The Ancient Agora" class="heritage-image">
-        <p>The Ancient Agora</p>
-      </a>
-      <a href="heritage_site4.html">
-        <img src="odeon_of_herodes_atticus_gallery.jpg" alt="The Odeon of Herodes Atticus" class="heritage-image">
-        <p>The Odeon of Herodes Atticus</p>
-      </a>
-      <a href="heritage_site5.html">
-        <img src="temple_of_olympian_zeus_gallery.jpg" alt="The Temple of Olympian Zeus" class="heritage-image">
-        <p>The Temple of Olympian Zeus</p>
-      </a>
-      <a href="heritage_site6.html">
-        <img src="erechtheion_gallery.jpg" alt="The Erechtheion" class="heritage-image">
-        <p>The Erechtheion</p>
-      </a>
-      <a href="heritage_site7.html">
-        <img src="temple_of_athena_nike_gallery.jpg" alt="The Temple of Athena Nike" class="heritage-image">
-        <p>The Temple of Athena Nike</p>
-      </a>
-      <a href="heritage_site8.html">
-        <img src="stoa_of_attalos_gallery.jpg" alt="The Stoa of Attalos" class="heritage-image">
-        <p>The Stoa of Attalos</p>
-      </a>
-      <a href="heritage_site9.html">
-        <img src="roman_agora_gallery.jpg" alt="The Roman Agora" class="heritage-image">
-        <p>The Roman Agora</p>
-      </a>
-      <a href="heritage_site10.html">
-        <img src="theater_of_dionysus_gallery.jpg" alt="The Theater of Dionysus" class="heritage-image">
-        <p>The Theater of Dionysus</p>
-      </a>
-    </div>
-  </main>
-  <footer>
-    <p>&copy; 2024 Explore Greece Tourism</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heritage Sites of Greece</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="wallet.js"></script>
+    <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Explore Greece</h1>
+      <img src="greece_logo.png" alt="Explore Greece Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="hotel_booking.html">Hotel Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="wallet-buttons">
+        <button
+          id="walletButton"
+          class="wallet-button"
+          onclick="connectWallet()"
+        >
+          Connect Your Wallet
+        </button>
+        <a href="balance.html" class="wallet-button">Withdraw</a>
+      </div>
+    </header>
+    <main>
+      <h2>Heritage Sites</h2>
+      <p>Explore Greece's rich history through its iconic heritage sites:</p>
+      <div class="heritage-list">
+        <a href="heritage_site1.html">
+          <img
+            src="parthenon_gallery.jpg"
+            alt="The Parthenon"
+            class="heritage-image"
+          />
+          <p>The Parthenon</p>
+        </a>
+        <a href="heritage_site2.html">
+          <img
+            src="temple_of_hephaestus_gallery.jpg"
+            alt="The Temple of Hephaestus"
+            class="heritage-image"
+          />
+          <p>The Temple of Hephaestus</p>
+        </a>
+        <a href="heritage_site3.html">
+          <img
+            src="ancient_agora_gallery.jpg"
+            alt="The Ancient Agora"
+            class="heritage-image"
+          />
+          <p>The Ancient Agora</p>
+        </a>
+        <a href="heritage_site4.html">
+          <img
+            src="odeon_of_herodes_atticus_gallery.jpg"
+            alt="The Odeon of Herodes Atticus"
+            class="heritage-image"
+          />
+          <p>The Odeon of Herodes Atticus</p>
+        </a>
+        <a href="heritage_site5.html">
+          <img
+            src="temple_of_olympian_zeus_gallery.jpg"
+            alt="The Temple of Olympian Zeus"
+            class="heritage-image"
+          />
+          <p>The Temple of Olympian Zeus</p>
+        </a>
+        <a href="heritage_site6.html">
+          <img
+            src="erechtheion_gallery.jpg"
+            alt="The Erechtheion"
+            class="heritage-image"
+          />
+          <p>The Erechtheion</p>
+        </a>
+        <a href="heritage_site7.html">
+          <img
+            src="temple_of_athena_nike_gallery.jpg"
+            alt="The Temple of Athena Nike"
+            class="heritage-image"
+          />
+          <p>The Temple of Athena Nike</p>
+        </a>
+        <a href="heritage_site8.html">
+          <img
+            src="stoa_of_attalos_gallery.jpg"
+            alt="The Stoa of Attalos"
+            class="heritage-image"
+          />
+          <p>The Stoa of Attalos</p>
+        </a>
+        <a href="heritage_site9.html">
+          <img
+            src="roman_agora_gallery.jpg"
+            alt="The Roman Agora"
+            class="heritage-image"
+          />
+          <p>The Roman Agora</p>
+        </a>
+        <a href="heritage_site10.html">
+          <img
+            src="theater_of_dionysus_gallery.jpg"
+            alt="The Theater of Dionysus"
+            class="heritage-image"
+          />
+          <p>The Theater of Dionysus</p>
+        </a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Explore Greece Tourism</p>
+    </footer>
+  </body>
 </html>

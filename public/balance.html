@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Check Your Balance</title>
-  <link rel="stylesheet" href="styless.css">
-</head>
-<body>
-  <header>
-    <h1>Account Balance</h1>
-  </header>
-  
-  <main>
-    <section class="balance-section">
-      <h2>Your Current Balance</h2>
-      <p id="current-balance">₹5000</p> <!-- Example balance -->
-      
-      <label for="deduct-amount">Enter Amount to Withdraw:</label>
-      <input type="number" id="deduct-amount" class="input-field">
-      <button id="deduct-button" class="button">Withdraw</button>
-      
-      <p id="message"></p> <!-- This will show messages like "Insufficient funds" -->
-    </section>
-  </main>
-  <script src="balance.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Your Balance</title>
+    <link rel="stylesheet" href="styless.css" />
+    <script src="wallet.js"></script>
+    <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Account Balance</h1>
+    </header>
+
+    <main>
+      <section class="balance-section">
+        <h2>Your Current Balance</h2>
+        <p id="current-balance">WRCT 5000</p>
+        <!-- Example balance -->
+
+        <label for="deduct-amount">Enter Amount to Withdraw:</label>
+        <input type="number" id="deduct-amount" class="input-field" />
+        <button id="deduct-button" class="button">Withdraw</button>
+
+        <p id="message"></p>
+        <!-- This will show messages like "Insufficient funds" -->
+      </section>
+    </main>
+    <script src="balance.js"></script>
+  </body>
 </html>

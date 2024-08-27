@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Theater of Dionysus</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Theater of Dionysus</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="wallet.js"></script>
+    <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>Explore Greece</h1>
-        <img src="greece_logo.png" alt="Explore Greece Logo" class="logo">
-        <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="heritage.html">Heritage</a></li>
-        <li><a href="hotel_booking.html">Hotel Booking</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>The Theater of Dionysus</h2>
-    <img src="theater_of_dionysus_gallery.jpg" alt="The Theater of Dionysus" class="site-image">
-    <p><strong>Description:</strong> The Theater of Dionysus is an ancient theater located on the southern slope of the Acropolis of Athens. It is considered the birthplace of Greek drama and one of the most important theaters of antiquity.</p>
-    <p><strong>History:</strong> The theater was originally constructed in the 5th century BC and underwent several renovations over the centuries. It was dedicated to Dionysus, the god of wine and theater. The theater hosted dramatic festivals, including the City Dionysia, which featured plays by renowned playwrights such as Aeschylus, Sophocles, and Euripides.</p>
-    <p>The Theater of Dionysus played a central role in the development of Western drama and theater, influencing dramatic structure and theatrical performance in subsequent cultures. Today, it remains a site of archaeological and cultural significance.</p>
-  </main>
-  <footer>
-    <p>&copy; 2024 Explore Greece Tourism</p>
-  </footer>
-</body>
+      <h1>Explore Greece</h1>
+      <img src="greece_logo.png" alt="Explore Greece Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="hotel_booking.html">Hotel Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="wallet-buttons">
+        <button
+          id="walletButton"
+          class="wallet-button"
+          onclick="connectWallet()"
+        >
+          Connect Your Wallet
+        </button>
+        <a href="balance.html" class="wallet-button">Withdraw</a>
+      </div>
+    </header>
+    <main>
+      <h2>The Theater of Dionysus</h2>
+      <img
+        src="theater_of_dionysus_gallery.jpg"
+        alt="The Theater of Dionysus"
+        class="site-image"
+      />
+      <p>
+        <strong>Description:</strong> The Theater of Dionysus is an ancient
+        theater located on the southern slope of the Acropolis of Athens. It is
+        considered the birthplace of Greek drama and one of the most important
+        theaters of antiquity.
+      </p>
+      <p>
+        <strong>History:</strong> The theater was originally constructed in the
+        5th century BC and underwent several renovations over the centuries. It
+        was dedicated to Dionysus, the god of wine and theater. The theater
+        hosted dramatic festivals, including the City Dionysia, which featured
+        plays by renowned playwrights such as Aeschylus, Sophocles, and
+        Euripides.
+      </p>
+      <p>
+        The Theater of Dionysus played a central role in the development of
+        Western drama and theater, influencing dramatic structure and theatrical
+        performance in subsequent cultures. Today, it remains a site of
+        archaeological and cultural significance.
+      </p>
+    </main>
+    <footer>
+      <p>&copy; 2024 Explore Greece Tourism</p>
+    </footer>
+  </body>
 </html>

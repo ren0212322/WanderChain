@@ -13,7 +13,7 @@ console.log(__path);
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.sendFile(`${__path}/public/home.html`);
+  res.sendFile(`${__path}/public/index.html`);
 });
 
 app.get("/create", (req, res) => {

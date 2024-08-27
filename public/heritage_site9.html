@@ -1,33 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Roman Agora</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Roman Agora</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="wallet.js"></script>
+    <script src="https://unpkg.com/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>Explore Greece</h1>
-        <img src="greece_logo.png" alt="Explore Greece Logo" class="logo">
-        <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="heritage.html">Heritage</a></li>
-        <li><a href="hotel_booking.html">Hotel Booking</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h2>The Roman Agora</h2>
-    <img src="roman_agora_gallery.jpg" alt="The Roman Agora" class="site-image">
-    <p><strong>Description:</strong> The Roman Agora is a large public space located to the north of the Ancient Agora of Athens. It was developed during the Roman period and features several important buildings and structures.</p>
-    <p><strong>History:</strong> Constructed during the 1st century BC and 1st century AD, the Roman Agora included a marketplace, public baths, and a large colonnaded courtyard. Key structures include the Gate of Athena Archegetis and the Tower of the Winds, a unique octagonal structure that served as a clocktower and meteorological station.</p>
-    <p>The Roman Agora reflects the influence of Roman architecture and urban planning on Athens, showcasing a blend of Greek and Roman cultural elements.</p>
-  </main>
-  <footer>
-    <p>&copy; 2024 Explore Greece Tourism</p>
-  </footer>
-</body>
+      <h1>Explore Greece</h1>
+      <img src="greece_logo.png" alt="Explore Greece Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="hotel_booking.html">Hotel Booking</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="wallet-buttons">
+        <button
+          id="walletButton"
+          class="wallet-button"
+          onclick="connectWallet()"
+        >
+          Connect Your Wallet
+        </button>
+        <a href="balance.html" class="wallet-button">Withdraw</a>
+      </div>
+    </header>
+    <main>
+      <h2>The Roman Agora</h2>
+      <img
+        src="roman_agora_gallery.jpg"
+        alt="The Roman Agora"
+        class="site-image"
+      />
+      <p>
+        <strong>Description:</strong> The Roman Agora is a large public space
+        located to the north of the Ancient Agora of Athens. It was developed
+        during the Roman period and features several important buildings and
+        structures.
+      </p>
+      <p>
+        <strong>History:</strong> Constructed during the 1st century BC and 1st
+        century AD, the Roman Agora included a marketplace, public baths, and a
+        large colonnaded courtyard. Key structures include the Gate of Athena
+        Archegetis and the Tower of the Winds, a unique octagonal structure that
+        served as a clocktower and meteorological station.
+      </p>
+      <p>
+        The Roman Agora reflects the influence of Roman architecture and urban
+        planning on Athens, showcasing a blend of Greek and Roman cultural
+        elements.
+      </p>
+    </main>
+    <footer>
+      <p>&copy; 2024 Explore Greece Tourism</p>
+    </footer>
+  </body>
 </html>
