@@ -13,6 +13,11 @@ body {
     text-align: center;
   }
   
+  .bal {
+    font-size: 2em;
+    color: #333;
+  }
+
   .balance-section {
     padding: 20px;
     max-width: 400px;

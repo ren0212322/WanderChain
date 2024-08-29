@@ -1,12 +1,12 @@
 document.getElementById("deduct-button").addEventListener("click", function () {
   let balance = parseFloat(
-    document.getElementById("current-balance").textContent.replace("WRCT", "")
+    document.getElementById("current-balance").textContent
   );
   let deduction = parseFloat(document.getElementById("deduct-amount").value);
   document.getElementById("deduct-amount").value = "";
   if (deduction <= balance) {
     balance -= deduction;
-    document.getElementById("current-balance").textContent = "WRCT " + balance;
+    document.getElementById("current-balance").textContent = balance;
     document.getElementById("message").textContent =
       "Amount deducted successfully!";
     document.getElementById("message").style.color = "green";
